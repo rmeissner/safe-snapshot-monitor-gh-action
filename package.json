@@ -1,0 +1,50 @@
+{
+  "name": "safe-snapshot-monitor-gh-action",
+  "version": "0.1.0",
+  "description": "GitHub Action to check Safe transaction state",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rimraf lib dist && tsc && ncc build dist/main.js -o lib --source-map --license licenses.txt",
+    "example": "ts-node examples/simulation.ts"
+  },
+  "husky": {
+    "hooks": {}
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmeissner/safe-snapshot-monitor-gh-action.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "@octokit/rest": "^16.0.0",
+    "actions-toolkit": "^2.1.0",
+    "axios": "^0.24.0",
+    "husky": "^4.3.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@octokit/types": "5.0.1",
+    "@types/memdown": "^3.0.0",
+    "@types/node": "^16.11.11",
+    "@types/util.promisify": "^1.0.4",
+    "@vercel/ncc": "^0.32.0",
+    "dotenv": "^10.0.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^3.8.3"
+  },
+  "author": "rmeissner",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/rmeissner/safe-snapshot-monitor-gh-action/issues"
+  },
+  "homepage": "https://github.com/rmeissner/safe-snapshot-monitor-gh-action#readme"
+}

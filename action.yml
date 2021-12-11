@@ -1,0 +1,23 @@
+name: "Safe Snapshot Monitor"
+description: "GitHub Action to monitor Snapshot for SafeSnap proposals"
+author: "rmeissner"
+branding:
+  icon: "award"
+  color: blue
+inputs:
+  safe-address:
+    description: "Address of the Safe to monitor (e.g. 0x0Da0...5afe)"
+  snapshot-space:
+    description: "Name of the Snapshot space (e.g. gnosis.eth)"
+  ipfs-url:
+    description: "Address of the IPFS endpoint"
+    default: "https://cloudflare-ipfs.com/ipfs"
+  snapshot-api:
+    description: "Address of the Snapshot GraphQL endpoint"
+    default: "https://hub.snapshot.org/graphql"
+  proposal-state:
+    description: "State of the proposals that should be monitored"
+    default: "active,pending"
+runs:
+  using: "node16"
+  main: "lib/index.js"
