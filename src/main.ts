@@ -26,8 +26,7 @@ async function run(): Promise<void> {
           "variables": {
             "first": 1000,
             "space": snapshotSpace,
-            "state": proposalState,
-            "state_in": ["pending"]
+            "state": state
           },
           "query": "query Proposals($first: Int!, $state: String!, $space: String) { proposals( first: $first where: {space: $space, state: $state} ) { ipfs } }"
         }
